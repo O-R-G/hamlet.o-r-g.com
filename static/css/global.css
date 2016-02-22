@@ -15,8 +15,8 @@ body, #page {
 	height: 100%;
 	
 	font-family: sf-text, Helvetica, Arial, sans-serif;
-	font-size: 15px;
-	line-height: 17px;
+	font-size: 18px;
+	line-height: 22px;
 	
 	/*white-space:nowrap;*/
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -38,7 +38,7 @@ img {
 
 a:link,
 a:visited {
-    color: #cc3338;
+    color: #ff0000;
     text-decoration: none;
 }
 
