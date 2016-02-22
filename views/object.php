@@ -37,7 +37,7 @@ else
 				}
 				else
 				{
-				?><a href="<? echo $host.$a_url; ?>">Hamlet</a><?
+				?><a href="<? echo $host.$a_url; ?>">Hamlet, Prince of Denmark.</a><?
 				}
 			?></li>
 			<ul class="nav-level">

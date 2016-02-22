@@ -75,9 +75,9 @@ if($uu->id)
 					<li><?
 						if($uu->id)
 						{
-							?><a href="<? echo $host; ?>">Hamlet</a><?
+							?><a href="<? echo $host; ?>">Hamlet, Prince of Denmark.</a><?
 						}
-						else { ?>Hamlet, Prince of Denmark<? }
+						else { ?>Hamlet, Prince of Denmark.<? }
 					?></li>
 					<ul class="nav-level"><?
 				$prevd = $nav[0]['depth'];
