@@ -201,3 +201,8 @@ img.large {
 img.small {
 	width: 33vw;
 }
+
+.stage {
+	font-style: italic;
+	padding-left: 2em;
+}
