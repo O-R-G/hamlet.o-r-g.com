@@ -6,6 +6,8 @@ function showHide()
 	var cols = document.getElementsByClassName("column-container");
 	var body = document.getElementById("body");
 	var header = document.getElementById("header");
+	var skull = document.getElementById("skull");
+	var ex = document.getElementById("ex");
 	if(isHidden)
 	{
 		scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
@@ -14,8 +16,8 @@ function showHide()
 			cols[i].className = cols[i].className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		header.className = header.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		body.className = body.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
-		// close_clock();
-		// fill_circle();
+		skull.className = skull.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
+		ex.className = ex.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		window.scrollTo(0, 0);
 		
 	}
@@ -26,7 +28,8 @@ function showHide()
 			cols[i].className = cols[i].className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		header.className = header.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		body.className = body.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
-		// open_clock();
+		skull.className = skull.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
+		ex.className = ex.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		window.scrollTo(0, scrollPos);
 	}
 	

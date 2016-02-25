@@ -5,9 +5,15 @@ if($settings_id)
 {
 	$m = $oo->media($settings_id)[0];
 	if($m)
+	{
 		$img = m_url($m);
+		$img_alt = $img;
+	}
 	else
+	{
 		$img = "/media/svg/yorick.svg";
+		$img_alt = "/media/svg/yorick-ex.svg";
+	}
 }
 else
 	$img = "/media/svg/yorick.svg";
@@ -17,15 +23,26 @@ if(!$uu->id)
 {
 ?>
 <div id="skull-container" class="v-centre">
-	<img id="clock-canvas" class="large skull" src="<? echo $img ?>">
+	<img id="skull" class="large skull visible" src="<? echo $img ?>">
+	<img id="ex" class="large skull ex hidden" src="<? echo $img_alt ?>">
 </div><?
 }
 else
 {
-?>
-	<div id="skull-container" class="lower-right">
-		<img id="clock-canvas" class="small skull" src="<? echo $img; ?>">
+	if($show_menu)
+	{
+	?><div id="skull-container" class="lower-right">
+		<img id="skull" class="small skull hidden" src="<? echo $img; ?>">
+		<img id="ex" class="small skull ex visible" src="<? echo $img_alt ?>">
 	</div><?
+	}
+	else
+	{
+	?><div id="skull-container" class="lower-right">
+		<img id="skull" class="small skull visible" src="<? echo $img; ?>">
+		<img id="ex" class="small skull ex hidden" src="<? echo $img_alt ?>">
+	</div><?
+	}
 }
 ?><script>
 var isHidden;
@@ -35,5 +52,5 @@ if($show_menu)
 else
 { ?>isHidden = true;<? }
 ?>
-document.getElementById("clock-canvas").addEventListener("click", showHide);
+document.getElementById("skull-container").addEventListener("click", showHide);
 </script>

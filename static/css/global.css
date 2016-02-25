@@ -70,9 +70,10 @@ ul:first-child {
 }
 
 #clock-canvas,
-.skull {
+#skull {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 
 #skull-container {
 	position: fixed;
