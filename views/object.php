@@ -53,9 +53,12 @@ for($i = 0; $i < count($b_arr); $i++)
 	}
 	?><div class="column-container"><? 
 		echo $b_arr[$i];
-		if($i == 0 && $marr[0])
+		if($i == 0)
 		{
-		?><div><img src="<? echo m_url($marr[0]);?>" id="fullscreen"></div><?
+			foreach($marr as $m)
+			{
+		?><div><img src="<? echo m_url($m);?>" id="fullscreen"></div><?
+			}
 		}
 	?></div><?
 	if($i % 2 == 1)
