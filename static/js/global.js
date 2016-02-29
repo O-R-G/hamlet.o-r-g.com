@@ -16,7 +16,7 @@ function showHide()
 			cols[i].className = cols[i].className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		header.className = header.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		body.className = body.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
-		skull.className = skull.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
+		skull.className = skull.className.replace( /(?:^|\s)visible(?!\S)/g , ' fade' );
 		ex.className = ex.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
 		window.scrollTo(0, 0);
 		
@@ -28,7 +28,7 @@ function showHide()
 			cols[i].className = cols[i].className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		header.className = header.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		body.className = body.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
-		skull.className = skull.className.replace( /(?:^|\s)hidden(?!\S)/g , ' visible' );
+		skull.className = skull.className.replace( /(?:^|\s)fade(?!\S)/g , ' visible' );
 		ex.className = ex.className.replace( /(?:^|\s)visible(?!\S)/g , ' hidden' );
 		window.scrollTo(0, scrollPos);
 	}

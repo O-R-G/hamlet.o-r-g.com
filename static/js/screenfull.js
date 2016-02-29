@@ -101,6 +101,7 @@
 				this.exit();
 			} else {
 				this.request(elem);
+				console.log(elem);
 			}
 		},
 		raw: fn

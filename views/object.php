@@ -55,9 +55,11 @@ for($i = 0; $i < count($b_arr); $i++)
 		echo $b_arr[$i];
 		if($i == 0)
 		{
+			$j = 0;
 			foreach($marr as $m)
 			{
-		?><div><img src="<? echo m_url($m);?>" id="fullscreen"></div><?
+		?><div><img src="<? echo m_url($m);?>" class="fullscreen"></div><?
+				$j++;
 			}
 		}
 	?></div><?
@@ -70,12 +72,18 @@ for($i = 0; $i < count($b_arr); $i++)
 
 <script type="text/javascript" src="<? echo $host; ?>static/js/screenfull.js"></script>	
 <script>
-	var e;
-	if (e = document.getElementById('fullscreen')) {
-		e.addEventListener('click', function () {
+	var imgs = document.getElementsByClassName('fullscreen');
+	var i;
+	var index;
+	for (i = 0; i < imgs.length; i++)
+	{
+		imgs[i].addEventListener('click', function () 
+		{
 			if (screenfull.enabled) {
-				screenfull.toggle(e);
+				screenfull.toggle(this);
 			}
-		});
+			index = i;
+			console.log(index);
+		}, false);
 	}
 </script>
