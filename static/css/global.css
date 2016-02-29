@@ -144,6 +144,13 @@ ul:first-child {
 	transform: translateY(-50%);
 }
 
+.h-centre {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
 .hidden {
 	display: none;
 	visibility: hidden;
@@ -198,7 +205,8 @@ ul:first-child {
 	}
 }
 
-img.large {
+img.large,
+object.large {
 	height: 80vh;
 }
 
@@ -213,8 +221,9 @@ img.small {
 
 .fade {
 	/*visibility: hidden;*/
-	opacity: 1;
+	opacity: 0;
 	
+	/*
 	-webkit-animation: fadeOut ease-out 1;
 	-moz-animation: fadeOut ease-out 1;
 	animation: fadeOut ease-out 1;
@@ -226,6 +235,7 @@ img.small {
 	-webkit-animation-duration: 2s;
 	-moz-animation-duration: 2s;
 	animation-duration: 2s;
+	*/
 }
 #skull.fade {
 	position: absolute;
@@ -256,4 +266,9 @@ img.small {
 	to { 
 		opacity:0; 
 	} 
+}
+
+.red {
+	stroke: red;
+	fill: red;
 }
