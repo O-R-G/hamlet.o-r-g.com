@@ -32,7 +32,7 @@ else
 	if($show_menu)
 	{
 	?><div id="skull-container" class="lower-right">
-		<img id="skull" class="small skull hidden" src="<? echo $img; ?>">
+		<img id="skull" class="small skull fade" src="<? echo $img; ?>">
 		<img id="ex" class="small skull ex visible" src="<? echo $img_alt ?>">
 	</div><?
 	}
