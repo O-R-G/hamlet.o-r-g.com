@@ -212,10 +212,48 @@ img.small {
 }
 
 .fade {
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0s 2s, opacity 2s linear;
+	/*visibility: hidden;*/
+	opacity: 1;
+	
+	-webkit-animation: fadeOut ease-out 1;
+	-moz-animation: fadeOut ease-out 1;
+	animation: fadeOut ease-out 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	animation-duration: 2s;
 }
 #skull.fade {
 	position: absolute;
+}
+
+@-webkit-keyframes fadeOut { 
+	from { 
+		opacity:1; 
+	} 
+	to { 
+		opacity:0; 
+	} 
+}
+
+@-moz-keyframes fadeOut { 
+	from { 
+		opacity:1; 
+	} 
+	to { 
+		opacity:0; 
+	} 
+}
+
+@keyframes fadeOut { 
+	from { 
+		opacity:1; 
+	} 
+	to { 
+		opacity:0; 
+	} 
 }
